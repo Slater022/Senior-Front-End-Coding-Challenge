@@ -1,0 +1,26 @@
+.head_site {
+  font-family: codeLight;
+  color: white;
+  text-align: right;
+  margin-right: $marginMedium;
+
+  .website_logo{
+
+  }
+
+  h3 {
+    font-size: 46px;
+    &:after{
+
+      background-size: $baseValue $baseValue;
+      display: inline-block;
+      width: $baseValue;
+      height: $baseValue;
+      content:"";
+      position: relative;
+      top: $marginSmall;
+      left: $marginSmall;
+    }
+
+  }
+}

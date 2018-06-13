@@ -1,0 +1,62 @@
+.detailTrigger {
+  position: relative;
+  img {
+    &:hover {
+      @extend .scalling_element;
+    }
+  }
+  cursor: pointer;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  -webkit-appearance: none;
+
+  padding: 0;
+
+}
+
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  z-index: 50;
+}
+
+.modal_box {
+  padding: 1em;
+  background: #fff;
+  box-shadow: 0 0 $paddingXSmall 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  -webkit-transition: all 0.3s cubic-bezier(0.2, 0.9, 0.3, 1.5);
+  transition: all 0.3s cubic-bezier(0.2, 0.9, 0.3, 1.5);
+  -webkit-transform: rotate(5deg) translate(-1em, 1em);
+  transform: rotate(5deg) translate(-1em, 1em);
+  border-top: 5px solid #da513d;
+  border-bottom: 5px solid #ddd;
+}
+
+/* modal magic */
+.detailTrigger:focus + .modal {
+  opacity: 1;
+  visibility: visible;
+}
+
+.detailTrigger:focus + .modal .modal_box {
+  -webkit-transform: rotate(0deg) translate(0, 0);
+  transform: rotate(0deg) translate(0, 0);
+}

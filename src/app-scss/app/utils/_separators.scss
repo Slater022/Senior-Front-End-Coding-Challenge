@@ -1,0 +1,23 @@
+.separator {
+  display: block;
+  height: 3px;
+  background-color: white;
+  margin: 24px auto 32px;
+}
+
+.small_separator {
+  @extend .separator;
+  width: 25%;
+}
+
+.big_separator {
+  @extend .separator;
+  width: 50%;
+}
+
+.thin_separator {
+  @extend .separator;
+  height: 1px;
+  margin: 8px 0;
+  width: 75%;
+}

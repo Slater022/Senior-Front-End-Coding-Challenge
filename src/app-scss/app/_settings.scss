@@ -1,0 +1,9 @@
+$baseValue : 64px;
+
+$marginMedium : $baseValue/2; // 32
+
+$marginSmall : $marginMedium/2; //16
+$paddingSmall : $baseValue/4; // 16
+
+$paddingXSmall : $paddingSmall/2; //8
+$marginXSmall : $paddingXSmall; //8

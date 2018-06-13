@@ -1,0 +1,33 @@
+@import 'app-scss/framework/sierra/src/sierra';
+@import 'app-scss/framework/neutron/neutron';
+
+@import "app-scss/app/_settings";
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: codeLight;
+  src: url(./assets/fonts/CODE_Light.otf);
+}
+
+
+@font-face {
+  font-family: codeBold;
+  src: url(./assets/fonts/CODE_Bold.otf);
+}
+
+@font-face {
+  font-family: overpassLight;
+  src: url(./assets/fonts/overpass/overpass-light.otf);
+}
+
+html, body {
+  @include columns(1);
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  background-color: #2B2B2B;
+}
+
+@import 'app-scss/app/_dashboard';
+

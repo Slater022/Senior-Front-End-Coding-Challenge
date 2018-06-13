@@ -1,0 +1,33 @@
+.categorie_series_title {
+  @extend .title_component_template;
+}
+
+.categorie_series {
+  @include columns(4);
+  padding: 0 $paddingXSmall;
+  .categorie_series_bloc {
+    padding: $paddingXSmall;
+    margin-top: $marginSmall;
+    &:hover {
+      @extend .scalling_element;
+    }
+    a {
+      img {
+        @include columns(1);
+      }
+    }
+    h3 {
+      font-family: codeBold;
+      font-size: 24px;
+      color: white;
+      text-align: left;
+      margin-top: $marginSmall;
+    }
+    span {
+      font-family: overpassLight;
+      font-size: 12px;
+      color: white;
+      text-align: justify;
+    }
+  }
+}

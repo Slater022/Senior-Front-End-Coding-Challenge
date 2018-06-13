@@ -1,0 +1,31 @@
+.search_input {
+  @extend .input;
+  @extend .full-width;
+  margin-left: $marginSmall;
+  margin-right: $marginSmall;
+  margin-bottom: $marginSmall;
+  width: calc(100% - 32px);
+}
+
+.form_search {
+  margin-left: $marginSmall;
+  margin-right: $marginSmall;
+  margin-bottom: $marginSmall;
+  width: calc(100% - 32px);
+  @include breakpoint_neutron(mobile) {
+    display: inline-grid;
+  }
+  .button {
+    @include breakpoint_neutron(mobile) {
+      width: 100%;
+      margin-top: $marginXSmall;
+    }
+
+    width: 20%;
+  }
+  .item {
+    @include breakpoint_neutron(mobile) {
+      width: 100%;
+    }
+  }
+}

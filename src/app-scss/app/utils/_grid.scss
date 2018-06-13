@@ -1,0 +1,35 @@
+.mosaic_content{
+
+  .masonry {
+    // Methode 1 : forcer la taille des images en hauteur mais avec des soucis de déformations
+    /*
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    img{
+      max-height: 250px;
+    }
+    */
+    // Methode 2 : masonry template mais avec un soucis d'ordre des contenus
+
+    column-count: 1;
+    @include breakpoint_neutron(phablet) {
+      column-count: 2;
+    }
+    @include breakpoint_neutron(tablet) {
+      column-count: 3;
+    }
+    @include breakpoint_neutron(desktop) {
+      column-count: 4;
+    }
+    column-gap: 1em;
+
+    // Methode 3 :
+    /*
+    Un mix de tout çà avec du Js en prime pour assurer le redimensionement ou simplement utiliser une librairie externe
+    qui fera le boulot pour nous
+     */
+
+  }
+}
+

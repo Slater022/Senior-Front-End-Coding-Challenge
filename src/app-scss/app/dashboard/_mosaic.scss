@@ -1,0 +1,40 @@
+.mosaic_content {
+
+  line-height: 0;
+  margin-left: $marginSmall;
+  margin-right: $marginSmall;
+  margin-bottom: $marginSmall;
+  overflow: visible;
+  .mosaic_series {
+    //@include columns(3, $margin: ($marginXSmall/2) , $flush-margin: false);
+
+    //
+    .mosaic_series_bloc {
+
+      img{
+
+      }
+
+      .detailTrigger {
+        &:hover {
+          z-index: 20;
+        }
+      }
+    }
+  }
+  img {
+    width: 100%;
+    height: auto;
+
+  }
+}
+
+.mosaic_series_title {
+  @extend .title_component_template;
+}
+
+.mosaic_big_separator {
+  @extend .big_separator;
+  margin: $marginSmall 0 $marginSmall $marginXSmall;
+
+}

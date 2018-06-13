@@ -1,0 +1,37 @@
+<div class="form-collapse form_search">
+  <div class="input item item-main">
+    <input placeholder="images search" type="text"
+           [(ngModel)]="searchValue"
+           (change)="updateSite()">
+  </div>
+  <button class="item button button-primary"
+          (click)="updateSite()">
+    Search
+  </button>
+</div>
+
+<section class="mosaic_content">
+  <section class="mosaic_series masonry" *ngIf="photos_list">
+    <div class="mosaic_series_bloc placeholder"
+         *ngFor="let photo of photos_list.photo">
+      <button class="detailTrigger">
+        <img src="{{photo_url_serv}}{{photo.server}}/{{photo.id}}_{{photo.secret}}_c.jpg" class="item" alt="">
+      </button>
+      <div class="modal">
+        <div class="modal__box">
+          <img src="{{photo_url_serv}}{{photo.server}}/{{photo.id}}_{{photo.secret}}_c.jpg" class="detailTrigger"
+               alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+  <util-spinner *ngIf="!photos_list"></util-spinner>
+</section>
+
+<!--
+<section class="more_content">
+  <button class="button_more" *ngIf="searchValue" (click)="loadMore()">Voir Plus</button>
+  <button class="button_more" *ngIf="!searchValue" (click)="loadMoreRecent()">Voir Plus</button>
+</section>
+-->
+

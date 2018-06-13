@@ -1,0 +1,30 @@
+
+.button_classes {
+  @extend .button;
+  @extend .block-mobile;
+  @extend .button-primary;
+
+  bottom: $marginSmall;
+  //fix du comportement responsive des buttons back / sierra
+  width: auto;
+}
+
+.back_content {
+  .button_back {
+    @extend .button_classes;
+    position: fixed;
+    right: $marginMedium;
+  }
+}
+
+.more_content {
+  //alignement des deux boutons
+  margin-bottom: $marginXSmall;
+  margin-left: $marginMedium;
+
+  .button_more {
+    @extend .button_classes;
+    left: $marginMedium;
+  }
+}
+
